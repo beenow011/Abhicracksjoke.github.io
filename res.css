@@ -1,0 +1,6 @@
+@media screen and (max-width:900px) {
+    #card1{
+        width: 84%!important; 
+        margin-top: 229px !important;
+    }
+}
