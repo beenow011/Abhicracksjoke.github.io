@@ -75,10 +75,27 @@ What’s the difference between a hippo and a zippo? One’s pretty heavy and th
 `What do you call a bear without any teeth? A gummy bear.`,
 `Why was the coach yelling at the vending machine? He wanted his quarter back.`]
 // let btn=document.getElementById('button')
+let play=true
+function soundmanage(){
+    if(play==true){
+        play=false
+        let i = document.getElementById('icon1')
+        i.innerHTML=` <span class="material-symbols-outlined">
+    music_off
+</span>`
+    }else{
+        play=true
+        let i = document.getElementById('icon1')
+        i.innerHTML=` <span class="material-symbols-outlined">
+        music_note
+    </span>`
+    }
+}
 let aud1 = new Audio('chipmunks-hehehei-113723.mp3')
 function generate(){
     let joke=a[Math.floor(Math.random() * a.length)]
     let place = document.getElementById('joke_here')
     place.innerHTML=joke
+    if(play==true)
     aud1.play()
 }
